@@ -1,3 +1,5 @@
+#https://www.codewars.com/kata/5526fc09a1bbd946250002dc/train/python
+
 def find_outlier(integers):
     paire:int = 0
     turn: int = 0
