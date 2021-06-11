@@ -1,19 +1,18 @@
-#https://www.codewars.com/kata/5264d2b162488dc400000001/train/python
-def spin_words(sentence):
-    final = ""
-    total = sentence.split()
-    for names in total:
-        num = 0
-        qnt_name = len(names)
-        if qnt_name > 4:
-            while num < len(names):
-                qnt_name -= 1
-                num += 1
-                for word in list(names[qnt_name]):
-                    final += word
-            final += " "
-        else:
-            final += names + " "
-    return final[0:len(sentence)]
+#https://www.codewars.com/kata/525f50e3b73515a6db000b83/train/python
 
-print(spin_words("in sekat dessap one gnirts tneserp"))
+def create_phone_number(n):
+    """ Transform the object in form of a phone number"""
+    number:str = ""
+    c = 0
+    for index in n:
+        if c == 0:
+            number += "("
+        if c == 3:
+            number += ") "
+        if c == 6:
+            number += "-"
+        number += str(index)
+        c += 1
+    return number
+
+print(create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
